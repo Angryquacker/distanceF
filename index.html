@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="https://angryquacker.github.io/PHjs/PHjs.js"></script>
+        <style>
+            html {
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 1.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function solve() {
+                let x1 = PH.getVal('x1');
+                let y1 = PH.getVal('y1');
+                let x2 = PH.getVal('x2');
+                let y2 = PH.getVal('y2');
+                let result = Math.sqrt( (x2 - x1) ** 2 + (y2 - y1) ** 2 );
+                $("#result").html('Your Result is: ' + result);
+            }
+        </script>
+        <div id="values">
+            <p>Point 1: X</p>
+            <input id="x1" type="text">
+            <br>
+            <p>Point 1: Y</p>
+            <input id="y1" type="text">
+            <br>
+            <p>Point 2: X</p>
+            <input id="x2" type="text">
+            <br>
+            <p>Point 2: Y</p>
+            <input id="y2" type="text" style="margin-bottom: 30px;">
+            <br>
+            <button onclick="solve()">Solve</button>
+            <p id="result"></p>
+        </div>
+    </body>
+</html>
