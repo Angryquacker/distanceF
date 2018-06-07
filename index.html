@@ -19,6 +19,10 @@
                 let x2 = PH.getVal('x2');
                 let y2 = PH.getVal('y2');
                 let result = Math.sqrt( (x2 - x1) ** 2 + (y2 - y1) ** 2 );
+                if (result == NaN) {
+                    $("#result").html('Invalid Input');
+                    return 0;
+                }
                 $("#result").html('Your Result is: ' + result);
             }
         </script>
